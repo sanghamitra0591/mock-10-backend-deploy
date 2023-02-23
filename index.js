@@ -15,13 +15,13 @@ app.get("/", (req, res)=>{
     res.send("Welcome to Home Page")
 })
 
-app.use("/", userRouter);
+app.use("/api/", userRouter);
 
 app.use(validate);
 
-app.use("/flights", flightRouter);
+app.use("/api/flights", flightRouter);
 
-app.use("/", bookingRouter);
+app.use("/api/", bookingRouter);
 
 
 
